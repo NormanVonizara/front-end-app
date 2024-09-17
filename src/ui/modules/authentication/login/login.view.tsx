@@ -15,7 +15,7 @@ interface Props {
 
 export const LoginView = ({form}: Props) => {
     return (
-        <Container className="grid grid-cols-2 gap-20 mt-20 mb-32">
+        <Container className="grid grid-cols-2 gap-20 mt-10 mb-32">
             <div>
                 <div className="relative flex items-center">
                     <Image

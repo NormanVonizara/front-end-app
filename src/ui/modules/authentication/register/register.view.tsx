@@ -12,7 +12,7 @@ interface Props {
 
 export const RegisterView = ({form}: Props) => {
     return (
-        <Container className="flex items-center justify-center mt-20 mb-32">
+        <Container className="flex items-center justify-center mt-10 mb-32">
             <div>
                 <Box padding_y="py-5">
                     <div className="flex items-center justify-between">

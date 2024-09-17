@@ -19,3 +19,9 @@ export interface LoginFormFieldsType {
     email: string,
     password: string
 }
+
+export interface AssignmentFormFieldsType {
+    mission_objectives: string,
+    planned_activities: string,
+    necessary_resources: string
+}

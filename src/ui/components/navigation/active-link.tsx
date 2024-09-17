@@ -16,7 +16,7 @@ export const ActiveLink = ({href, children}: PropsWithChildren<Props>) => {
         return pathname === href
     }, [pathname, href])
     return (
-        <Link href={href} className={clsx(isActive && "text-primary font-medium")}>
+        <Link href={href} className={clsx(isActive && "bg-midnight-700 font-medium", "flex gap-2 items-center px-3 py-4 hover:bg-midnight-700 transition-all")}>
             {children}
         </Link>
     )

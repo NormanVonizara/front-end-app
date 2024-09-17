@@ -1,3 +1,4 @@
+
 import {PropsWithChildren} from "react";
 import {IconProps} from "@/types/iconProps";
 import clsx from "clsx";
@@ -17,7 +18,7 @@ interface Props {
     linkType?: LinkType,
     type?: "button" | "submit",
     fullWidth?: boolean,
-    action?: Function
+    action?: Function,
 }
 
 export const Button = ({

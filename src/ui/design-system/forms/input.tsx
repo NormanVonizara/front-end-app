@@ -4,8 +4,8 @@ import {Typography} from "@/ui/design-system/typography/typography";
 interface Props {
     placeholder: string,
     type: "text" | "email" | "password",
-    register: any,
-    errors: any,
+    register?: any,
+    errors?: any,
     id: string,
     errorMessage?: string,
     required?: boolean,
