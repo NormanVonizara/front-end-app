@@ -32,10 +32,10 @@ export const MissionLayout = ({children}: PropsWithChildren) => {
                     <ActiveLink href="/assignment">
                         <MdAssignment />Tableau de bord des missions
                     </ActiveLink>
-                    <ActiveLink href="/assignment/create">
+                    <ActiveLink href="/assignment/create-tdr">
                         <IoCreateOutline />Créer une nouvelle mission (TDR)
                     </ActiveLink>
-                    <ActiveLink href="/">
+                    <ActiveLink href="/assignment/create-om">
                         <TbMenuOrder />Créer un autre ordre de mission (OM)
                     </ActiveLink>
                 </Typography>

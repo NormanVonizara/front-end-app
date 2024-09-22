@@ -2,8 +2,8 @@ import clsx from "clsx";
 import {Typography} from "@/ui/design-system/typography/typography";
 
 interface Props {
-    placeholder: string,
-    type: "text" | "email" | "password",
+    placeholder?: string,
+    type: "text" | "email" | "password" | "date",
     register?: any,
     errors?: any,
     id: string,

@@ -40,7 +40,7 @@ export default function Assignment () {
                         <Button
                             icon={{icon: IoCreateOutline}}
                             iconPosition="left"
-                            baseUrl="/assignment/create"
+                            baseUrl="/assignment/create-tdr"
                         >
                             Créer une nouvelle mission
                         </Button>

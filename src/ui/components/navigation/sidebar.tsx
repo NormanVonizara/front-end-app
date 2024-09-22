@@ -24,7 +24,7 @@ export const Sidebar = ({show}: Props) => {
                    className="flex flex-col"
                >
                    <ActiveLink
-                       href="/design-system"
+                       href="/"
                    >
                        <MdDashboard />Tableau de bord
                    </ActiveLink>
@@ -34,7 +34,7 @@ export const Sidebar = ({show}: Props) => {
                    <ActiveLink href="/formations">
                        <PiShoppingCartSimpleLight />Demande d'achat
                    </ActiveLink>
-                   <ActiveLink href="/contact">
+                   <ActiveLink href="/request_in_advance">
                        <MdOutlineRequestPage />Demande d'avance
                    </ActiveLink>
                    <ActiveLink href="/contact">

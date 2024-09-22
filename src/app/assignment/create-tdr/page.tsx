@@ -3,7 +3,7 @@ import {Layout} from "@/ui/components/layout/layout";
 import {Typography} from "@/ui/design-system/typography/typography";
 import {AssignmentContainer} from "@/ui/modules/assignment/assignment.container";
 
-export default function CreateAssignement () {
+export default function CreateTdrAssignement () {
     return(
         <Layout>
             <MissionLayout>

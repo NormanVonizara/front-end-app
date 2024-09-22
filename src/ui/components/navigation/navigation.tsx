@@ -37,7 +37,7 @@ export const Navigation = ({}: Props) => {
                                 <Logo size="small"/>
                                 <div className="flex flex-col">
                                     <div className="text-white font-extrabold text-[24px]">
-                                        Coders Monkeys
+                                        Gestion Financières
                                     </div>
                                     <Typography
                                         variant="caption4"
@@ -45,7 +45,7 @@ export const Navigation = ({}: Props) => {
                                         theme="gray"
                                     >
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                        Trouve de l'inspiration & reçois des feedbacks !
+                                        Votre solution financière !
                                     </Typography>
                                 </div>
                             </div>
