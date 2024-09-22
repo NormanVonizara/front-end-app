@@ -16,7 +16,7 @@ interface Props {
 
 export const Sidebar = ({show}: Props) => {
     return(
-        <aside className={clsx("absolute top-0 bg-midnight shadow-2xl h-full z-10 transition-all", show ? "left-0" : "-left-96")}>
+        <aside className={clsx("top-0 fixed bg-midnight shadow-2xl h-full z-10 transition-all", show ? "left-0" : "-left-96")}>
            <div className="p-20">
                <Typography
                    variant="caption3"
@@ -43,7 +43,7 @@ export const Sidebar = ({show}: Props) => {
                    <ActiveLink href="/contact">
                        <FcApproval />Approbation
                    </ActiveLink>
-                   <ActiveLink href="/contact">
+                   <ActiveLink href="/mission_report">
                        <MdReportGmailerrorred />Rapport de mission
                    </ActiveLink>
                    <hr/>
