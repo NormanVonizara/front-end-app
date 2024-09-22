@@ -62,3 +62,15 @@ export interface MissionReportFormFieldsType {
     recommendations: string,
     next_steps: string
 }
+
+export interface PurchaseRequestFormFieldsType {
+    item: string,
+    quantity: string,
+    unit_type: string,
+    description: string,
+    estimated_unit_price: string,
+    estimated_total: string,
+    notes: string,
+    project_code: string,
+    geo_code: string
+}
