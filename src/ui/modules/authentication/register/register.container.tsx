@@ -1,6 +1,6 @@
 "use client"
 
-import {SubmitHandler, useForm} from "react-hook-form";
+import {set, SubmitHandler, useForm} from "react-hook-form";
 import {RegisterFormFieldsType} from "@/types/forms";
 import {RegisterView} from "@/ui/modules/authentication/register/register.view";
 import {useState} from "react";
@@ -11,14 +11,27 @@ export const RegisterContainer = () => {
         handleSubmit,
         formState: {errors},
         register,
+        control,
         setError,
-        reset
+        watch
     } = useForm<RegisterFormFieldsType>()
     const onSubmit: SubmitHandler<RegisterFormFieldsType> = async (formData) => {
         setIsLoading(true)
         console.log(formData)
+        const {firstname, lastname, email, phone_number, password, role} = formData
+        try {
+            await fetch("", {
+                method: "POST",
+                body: JSON.stringify({firstname, lastname, email, phone_number, password, role}),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+        } catch (e) {
+            console.error(e)
+        }
     }
     return (
-        <RegisterView form={{handleSubmit, errors, register, onSubmit, isLoading}}/>
+        <RegisterView form={{handleSubmit, errors, register, onSubmit, isLoading, control, setError, watch}}/>
     )
 }

@@ -29,7 +29,7 @@ export const Textarea = ({
                 className={clsx(
                     isLoading && "cursor-not-allowed",
                     errors[id] ? "placeholder-alert-danger text-alert-danger focus:ring-alert-danger" : "placeholder-gray-600 focus:ring-gray-400",
-                    "p-4 h-32 w-full font-white rounded focus:outline-none focus:ring-2 bg-gray-500 text-gray resize-none"
+                    "p-4 h-32 w-full max-sm:text-caption4 font-white rounded focus:outline-none focus:ring-2 bg-gray-500 text-gray resize-none"
                 )}
                 disabled={isLoading}
                 {...register(id, {

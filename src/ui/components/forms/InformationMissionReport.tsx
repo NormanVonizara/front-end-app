@@ -8,7 +8,7 @@ interface Props {
 export const InformationMissionReport = ({form}: Props) => {
     const {isLoading, register, errors} = form
     return(
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1">
             <Input
                 isLoading={isLoading}
                 type="date"

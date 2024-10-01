@@ -3,7 +3,10 @@ export interface FormsType {
     errors: any,
     register: any,
     onSubmit: any,
-    isLoading: boolean
+    isLoading: any,
+    control?: any,
+    setError?: any,
+    watch?: any
 }
 
 export interface RegisterFormFieldsType {
@@ -11,8 +14,9 @@ export interface RegisterFormFieldsType {
     lastname: string,
     email: string,
     password: string,
+    confirmPassword: string,
     role: string,
-    tel: number
+    phone_number: string
 }
 
 export interface LoginFormFieldsType {

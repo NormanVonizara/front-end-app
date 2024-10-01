@@ -15,8 +15,8 @@ interface Props {
 
 export const LoginView = ({form}: Props) => {
     return (
-        <Container className="grid grid-cols-2 gap-20 mt-10 mb-32">
-            <div>
+        <Container className="flex justify-center items-center gap-5 mt-10 mb-32">
+            <div className="w-[531px] flex-none max-lg:hidden">
                 <div className="relative flex items-center">
                     <Image
                         width={531}
@@ -26,16 +26,18 @@ export const LoginView = ({form}: Props) => {
                     />
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="w-full max-lg:w-[450px]">
                 <Box padding_y="py-5">
                     <div className="flex items-center justify-between">
-                        <Typography
-                            variant="h5"
-                            tag="h1"
-                            theme="black"
-                        >
-                            Connexion
-                        </Typography>
+                        <div>
+                            <Typography
+                                variant="h5"
+                                tag="h1"
+                                theme="black"
+                            >
+                                Connexion
+                            </Typography>
+                        </div>
                         <div className="flex items-center gap-2">
                             <Typography
                                 variant="caption4"

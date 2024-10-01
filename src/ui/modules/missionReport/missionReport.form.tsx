@@ -9,24 +9,36 @@ import {NextStepMissionReport} from "@/ui/components/forms/NextStepMissionReport
 import {GrFormNextLink, GrFormPreviousLink} from "react-icons/gr";
 import {Button} from "@/ui/design-system/button/button";
 import {VscGitPullRequest} from "react-icons/vsc";
-import {MissionReportStep} from "@/ui/design-system/step/missionReportStep";
+import {Steps, StepTypography} from "@/ui/design-system/step/steps";
+import {Step} from "@/types/step";
+import {v4 as uuidv4} from "uuid";
 
 interface Props {
     form: FormsType
 }
 
 export const MissionReportForm = ({form}: Props) => {
-    const {step, steps, currentStepIndex, back, next} = useMultiStepForm([<InformationMissionReport form={form} />, <ObjectivesMissionReport form={form} />, <ProgressOfActivitiesMissionReport form={form} />, <ResultMissionReport form={form} />, <RecommandationsMissionReport form={form} />, <NextStepMissionReport form={form} />])
+    const {step, steps, currentStepIndex, back, next} = useMultiStepForm([<InformationMissionReport key={uuidv4()} form={form} />, <ObjectivesMissionReport key={uuidv4()} form={form} />, <ProgressOfActivitiesMissionReport key={uuidv4()} form={form} />, <ResultMissionReport key={uuidv4()} form={form} />, <RecommandationsMissionReport key={uuidv4()} form={form} />, <NextStepMissionReport key={uuidv4()} form={form} />])
     const {
         handleSubmit,
         onSubmit,
         isLoading
     } = form;
+    const stepsItems: Step[] = [
+        {name: "Informations de la Mission", number: 1},
+        {name: "Objectifs de la mission", number: 2},
+        {name: "Déroulements des activités", number: 3},
+        {name: "Résultats", number: 4},
+        {name: "Récommendations", number: 5},
+        {name: "Prochaines étapes", number: 6}
+    ]
     return (
         <>
-            <div
-                className="grid grid-cols-6 gap-2">
-                <MissionReportStep currentStepIndex={currentStepIndex + 1}/>
+            <div className="lg:hidden">
+                <StepTypography name={stepsItems[currentStepIndex].name} number={stepsItems[currentStepIndex].number}/>
+            </div>
+            <div className="grid grid-cols-6 gap-2">
+                <Steps currentStepIndex={currentStepIndex + 1} steps={stepsItems}/>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="pt-8 pb-5 space-y-4">
                 {step}
